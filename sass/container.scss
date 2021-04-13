@@ -1,0 +1,18 @@
+.container {
+  max-width: 1880px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+@media (max-width: $max-tablet-width) {
+  .container {
+    width: 767px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .container {
+    width: 320px;
+  }
+}
+

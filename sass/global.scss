@@ -1,0 +1,43 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: $black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "MullerRegular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+
+

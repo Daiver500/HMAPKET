@@ -1,0 +1,20 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "MullerRegular";
+  font-style: normal;
+  font-display: swap;
+  src: local("MullerRegular"),
+    local("Muller-Regular"),
+       url("../fonts/MullerRegular.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/MullerRegular.woff") format("woff"), /* Modern Browsers */
+}
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "MullerMedium";
+  font-style: normal;
+  font-display: swap;
+  src: local("MullerMedium"),
+    local("Muller-Medium"),
+       url("../fonts/MullerMedium.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/MullerMedium.woff") format("woff"), /* Modern Browsers */
+}
