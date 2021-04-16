@@ -1,9 +1,8 @@
-.modal__inner,
-.modal-success__inner {
+.modal__inner {
   display: flex;
   width: 490px;
   min-height: 605px;
-  position: relative;
+  position: fixed;
   top: calc(50% - 295px);
   right: 0;
   left: 0;
@@ -12,12 +11,11 @@
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: 2;
-  background-color: yellow;
+  background-color: $yellow;
 }
 
-.modal,
-.modal-success {
-  position: relative;
+.modal {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -63,7 +61,7 @@
   padding: 16px;
   margin-bottom: 30px;
   min-width: 380px;
-  background-color: orange;
+  background-color: $yellow-active;
   border: 0;
   color: $white;
 }
@@ -96,21 +94,7 @@
   color: orange;
 }
 
-.modal-success__title {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  max-width: 380px;
-}
-
-.modal-success__text {
-  color: $white;
-  font-size: 24px;
-  line-height: 31px;
-}
-
-.modal__close,
-.modal-success__close {
+.modal__close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -121,60 +105,18 @@
   cursor: pointer;
 }
 
-.modal__checkbox-label {
-  max-width: 380px;
-  display: flex;
-  position: relative;
-  min-height: 16px;
-  cursor: pointer;
-  color: $white;
-  font-size: 14px;
-  line-height: 16px;
-  padding-left: 30px;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.modal__checkbox {
-  position: absolute;
-  appearance: none;
-  display: none;
-}
-
-.modal__checkbox-text {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  left: 0;
-  background-image: url("../img/checkbox.svg");
-  background-repeat: no-repeat;
-}
-
-.modal__checkbox:checked + .modal__checkbox-text {
-  background-image: url("../img/checkbox-checked.svg");
-  background-repeat: no-repeat;
-}
-
 .hidden {
   display: none;
 }
 
 @media (max-width: $max-tablet-width) {
-  /*.modal,
-  .modal__inner,
-  .modal-success,
-  .modal-sucess__inner {
-    display: none;
-  }*/
-
-  .modal__inner,
-  .modal-success__inner {
-    width: 100%;
+  .modal__inner {
+    width: 490px;
     justify-content: center;
   }
 
   .modal__data {
-    width: 320px;
+    width: 100%;
     padding: 10px;
   }
 
@@ -183,5 +125,21 @@
     font-size: 16px;
     line-height: 22px;
     max-width: 320px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .modal__inner {
+    width: 300px;
+  }
+
+  .modal__data {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .modal__form input,
+  .modal__form textarea {
+    min-width: 280px;
   }
 }

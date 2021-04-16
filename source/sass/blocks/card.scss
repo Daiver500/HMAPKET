@@ -343,7 +343,7 @@
   .price__button {
     grid-column-start: unset;
     grid-column-end: unset;
-    max-width: 100%;
+    width: 100%;
   }
 
   .price__button::before {
