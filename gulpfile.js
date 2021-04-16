@@ -9,7 +9,6 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
@@ -53,21 +52,10 @@ const imageswebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"))
-    .pipe(gulp.dest("build/img"))
-}
+    .pipe(gulp.dest("build/img"));
+};
 
 exports.imageswebp = imageswebp;
-
-//SVG sprite
-
-const sprite = () => {
-  return gulp.src("source/img/sprite/icon-*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.sprite = sprite;
 
 //HTML
 
@@ -113,7 +101,6 @@ const build = () => gulp.series (
   copy,
   styles,
   images,
-  sprite,
   htmlinclude,
   imageswebp,
 );
@@ -137,7 +124,7 @@ const server = (done) => {
 
 exports.server = server;
 
-//HTML and JS
+//HTML
 
 const html = () => {
   return gulp.src(["source/*.html"

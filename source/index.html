@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card</title>
+    <meta name="description" content="карточка товара" />
+    <meta name="keywords" content="квартиры" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="fonts/roboto-regular.woff" as="font" />
+    <link rel="preload" href="fonts/MuseoSansCyrl700.woff" as="font" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+<body>
+  <section class="card">
+    <h1 class="visually-hidden">Карточка 2-х комнатной квартиры</h1>
+    <div class="card__inner container">
+<div class="card__image">
+          <picture class="card__picture">
+            <source type="image/webp" srcset="img/scheme.webp, img/scheme@2x.webp 2x ">
+            <img src="img/scheme.png" srcset="img/scheme@2x.png 2x" width="87"
+              height="160" alt="фотография квартиры"> <!--width: 178, height: 178, for retina width: 356, height: 356-->
+          </picture>
+</div>
+      <div class="card__parametres parametres">
+        <h2 class="parametres__header">2-к квартира</h2>
+          <ul class="parametres__list">
+            <li class="parametres__item">
+              <p class="parametres__title">Этаж</p>
+              <p class="parametres__text">3 из 19</p>
+            </li>
+            <li class="parametres__item">
+              <p class="parametres__title">Высота потолков</p>
+              <p class="parametres__text">3,2 м</p>
+            </li>
+            <li class="parametres__item">
+              <p class="parametres__title">Отделка</p>
+              <p class="parametres__text">Предчистовая</p>
+            </li>
+            <li class="parametres__item">
+              <p class="parametres__title">Общая площадь</p>
+              <p class="parametres__text">32,24 м<span class="parametres__sign">2</span></p>
+            </li>
+            <li class="parametres__item">
+              <p class="parametres__title">Жилая площадь</p>
+              <p class="parametres__text">22,24 м<span class="parametres__sign">2</span></p>
+            </li>
+            <li class="parametres__item">
+              <p class="parametres__title">Площадь кухни</p>
+              <p class="parametres__text">14,24 м<span class="parametres__sign">2</span></p>
+            </li>
+          </ul>
+          <div class="parametres__buttons">
+            <button class="parametres__button parametres__green" type="button">Вы были на просмотре</button>
+            <button class="parametres__button parametres__red" type="button">Дом аккредитован другим банком</button>
+          </div>
+      </div>
+      <div class="card__price price">
+        <div class="card__description">
+        <p class="price__text">Ваша цена по брони <span class="price__blue">до 19 сентября</span></p>
+        <h3 class="price__title">3 312 666</h3>
+        <p class="price__text">Текущая цена у застройщика <br> дороже на <span class="price__red">324 825</span></p>
+        </div>
+        <button class="price__button" type="button">Выбрать для покупки</button>
+      </div>
+      <button class="card__close" type="button" aria-label="закрыть карточку">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7951 5.30799C6.38445 4.89734 5.71864 4.89734 5.30799 5.30799C4.89734 5.71865 4.89734 6.38445 5.30799 6.7951L10.5129 12L5.30804 17.2049C4.89739 17.6156 4.89739 18.2814 5.30804 18.692C5.71869 19.1027 6.3845 19.1027 6.79515 18.692L12 13.4871L17.2049 18.692C17.6155 19.1026 18.2813 19.1026 18.692 18.692C19.1026 18.2813 19.1026 17.6155 18.692 17.2049L13.4871 12L18.692 6.79512C19.1027 6.38446 19.1027 5.71866 18.692 5.30801C18.2814 4.89735 17.6156 4.89735 17.2049 5.30801L12 10.5129L6.7951 5.30799Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section  class="modal">
+    <div class="modal__inner">
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="modal__data">
+          <h2 class="modal__header">Закажите звонок</h2>
+          <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <label> <span class="visually-hidden">Имя</span>
+            <input class="modal__name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" type="text" name="text" placeholder="Имя"
+              required="">
+          </label>
+          <label> <span class="visually-hidden">Телефон</span>
+            <input class="modal__phone" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" type="tel" name="telephone" id="phone" placeholder="+7 Введите 10 цифр номера" required />
+          </label>
+          <label> <span class="visually-hidden">Вопросы</span>
+          <textarea class="modal__text" name="text" rows="5" cols="10" id="questions"
+            placeholder="Ваш вопрос"></textarea>
+          </label>
+          <button class="modal__button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal__close" type="button" aria-label="Закрыть модальное окно">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z"
+            fill="white" />
+        </svg>
+      </button>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>
