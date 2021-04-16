@@ -1,0 +1,38 @@
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"),
+    url("../fonts/roboto-regular.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/roboto-regular.woff") format("woff"), /* Modern Browsers */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto"),
+    url("../fonts/roboto-500.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/roboto-500.woff") format("woff"), /* Modern Browsers */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"),
+    url("../fonts/roboto-700.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/roboto-700.woff") format("woff"), /* Modern Browsers */
+}
+
+/* Museo */
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Museo Sans Cyrl"),
+    url("../fonts/MuseoSansCyrl700.woff") format("woff"), /* Modern Browsers */
+}
