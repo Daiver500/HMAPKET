@@ -2,14 +2,9 @@
 
 // Модальное окно
 
-
-  const modalForm = document.querySelector(".modal__form");
-  const openModalButton = document.querySelector(".navigation__button");
+  const orderButton = document.querySelector(".price__button");
   const closeModalButton = document.querySelector(".modal__close");
   const modalMain = document.querySelector(".modal");
-  const modalSuccess = document.querySelector(".modal-success");
-  const modalMainInner = document.querySelector(".modal__inner");
-  const modalSuccessInner = document.querySelector(".modal-success__inner");
 
   modalMain.classList.add("hidden");
 
@@ -41,7 +36,6 @@
     closeModalButton.removeEventListener("click", openModalButtonClickHandler);
     modalMain.removeEventListener("click", windowClickHandler);
     document.removeEventListener("keydown", modalEscPressHandler);
-    modalForm.removeEventListener("submit", formSendingHandler);
   };
 
   const openModalButtonClickHandler = () => {
@@ -52,8 +46,8 @@
     closeModal();
   };
 
-  if (openModalButton) {
-  openModalButton.addEventListener("click", openModalButtonClickHandler);
+  if (orderButton) {
+    orderButton.addEventListener("click", openModalButtonClickHandler);
   }
 
 
